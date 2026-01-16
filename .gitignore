@@ -1,2 +1,7 @@
-data.csv
-vit-dinov2-base.npz
+*.csv
+*.npz
+__pycache__/
+*.pyc
+media/
+local_images/
+db_*.npy
