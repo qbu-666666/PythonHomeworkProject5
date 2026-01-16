@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>搜索结果</title>
+    <style>
+        body {font-family: Arial; margin: 20px;}
+        .grid {display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;}
+        img {max-width: 100%; height: auto;}
+    </style>
+</head>
+<body>
+    <h1>查询图片：{{ query_name }}</h1>
+    <img src="{{ query_url }}" style="max-width: 400px;">
+
+    <h1>Top 10 相似结果（共 64 张数据库）</h1>
+    <div class="grid">
+        {% for r in results %}
+        <div style="border: 1px solid #ccc; padding: 10px;">
+            <img src="{{ r.img_url }}">
+            <p><strong>相似度：</strong> {{ r.sim }}</p>
+            <p><strong>描述：</strong> {{ r.caption }}</p>
+        </div>
+        {% endfor %}
+    </div>
+    <br>
+    <a href="/">再搜一张</a>
+</body>
+</html>
