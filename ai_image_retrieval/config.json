@@ -1,0 +1,15 @@
+{
+    "device": "cpu",
+    "weights_path": "vit-dinov2-base.npz",
+    "image_size": 518,
+    "similarity_threshold": 0.5,
+    "top_k": 10,
+    "proxy": {
+        "http": "http://127.0.0.1:7890",
+        "https": "http://127.0.0.1:7890"
+    },
+    "media_root": "media/",
+    "db_features_path": "data/db_features.npy",
+    "db_paths_path": "data/db_paths.npy",
+    "db_captions_path": "data/db_captions.npy"
+}
